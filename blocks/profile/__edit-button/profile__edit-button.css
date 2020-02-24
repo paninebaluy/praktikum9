@@ -1,0 +1,12 @@
+.profile__edit-button {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 24px 0 0 0;
+    width: 38px;
+    height: 18px;
+    box-sizing: border-box;
+}

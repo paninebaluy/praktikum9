@@ -1,0 +1,7 @@
+.place-card__likes {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font-style: normal;
+    font-size: 0.8em;
+}

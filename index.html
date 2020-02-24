@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Mesto</title>
+  <link rel='stylesheet' href='./pages/index.css'>
+  <script src='./scripts/api.js'></script>
+  <script src='./scripts/card.js'></script>
+  <script src='./scripts/cardlist.js'></script>
+  <script src='./scripts/formvalidator.js' defer></script>
+  <script src='./scripts/popup.js'></script>
+  <script src='./scripts/userinfo.js'></script>
+  <script src='./scripts/main.js' defer></script>
+</head>
+<body>
+  <div class='root'>
+    <header class='header root__section'>
+      <img src='./images/logo.svg' alt='mesto logo' class='logo'>
+    </header>
+    <div class='profile root__section'>
+      <div class='user-info'>
+        <div class='user-info__photo'></div>
+        <div class='user-info__data'>
+          <h1 class='user-info__name'></h1>  
+          <p class='user-info__job'></p>
+          <button class='button profile__edit-button'>Edit</button>
+        </div>
+        <button class='button user-info__button'>+</button>
+      </div>
+    </div>
+    <div class='places-list root__section'>
+      <!-- all cards go here -->
+    </div>
+    <div class='popup' id='newplace'>
+      <div class='popup__content popup__content_type_form'>
+        <img src='./images/close.svg' alt='close' class='popup__close'>
+        <h3 class='popup__title'>Новое место</h3>
+        <form class='popup__form' name='new' action='/' method='GET'>
+            <input type='text' name='name' class='popup__input popup__input_type_name' placeholder='Название' required minlength='2' maxlength='30'>
+            <span class='popup__input-error' for='name' id='error-name'></span>
+            <input type='url' name='link' class='popup__input popup__input_type_link-url' placeholder='Ссылка на картинку' required>
+            <span class='popup__input-error' for='link' id='error-link'></span>
+            <button type='submit' class='button popup__button popup__button_style_add' disabled>+</button>
+        </form>
+      </div>
+    </div>
+
+    <div class='popup' id='edit'>
+      <div class='popup__content popup__content_type_form'>
+        <img src='./images/close.svg' alt='close' class='popup__close'>
+        <h3 class='popup__title'>Редактировать профиль</h3>
+        <form class='popup__form' name='editinfo' action='/' method='GET'>
+          <input type='text' name='name' class='popup__input popup__input_type_name' placeholder='Имя' required minlength='2' maxlength='30'>
+          <span class='popup__input-error' for='name' id='error-persons-name'></span>
+          <input type='text' name='info' class='popup__input popup__input_type_link-url' placeholder='О себе' required minlength='2' maxlength='30'>
+          <span class='popup__input-error' for='info' id='error-info'></span>
+          <button type='submit' class='button popup__button popup__button_style_save' disabled>Сохранить</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class='popup' id='picture'>
+      <div class='popup__content popup__content_type_image'>
+        <img src='./images/close.svg' alt='close' class='popup__close'>
+        <img class='popup__image' alt='large image'>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Шаблон для вёрстки карточки: -->
+  <template id='card-sample'>
+    <div class='place-card'>
+      <div class='place-card__image'>
+        <button class='place-card__delete-icon'></button>
+      </div>
+      <div class='place-card__description'>
+        <h3 class='place-card__name'></h3>
+        <button class='place-card__like-icon'><p class='place-card__likes'></p></button>
+      </div>
+    </div>
+  </template>
+  <!-- конец шаблона. -->
+  </body>
+</html>

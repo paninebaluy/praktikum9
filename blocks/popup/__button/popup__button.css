@@ -1,0 +1,21 @@
+@import url('./_style/popup__button_style_add.css');
+@import url('./_style/popup__button_style_save.css');
+
+.popup__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.popup__button:disabled {
+  border: 1px solid rgba(0, 0, 0, .2);
+  background-color: inherit;
+  color: rgba(0, 0, 0, .2);
+}
+
+.popup__button:enabled {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #FFF;
+}
