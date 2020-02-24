@@ -3,7 +3,7 @@
 //variables
 const authData = {
   cohortId: 'cohort7',
-  serverUrl: 'http://95.216.175.5/',
+  serverUrl: 'https://praktikum.tk/',
   authToken: 'a23141ad-1fbc-473a-91ed-36b5b30ff7c4',
 };
 const myData = {
