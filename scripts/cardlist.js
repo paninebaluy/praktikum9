@@ -27,7 +27,7 @@ class CardList {
             };
             const anotherCard = this.newCard(cardParams, this.functions, this.myData);
             anotherCard.create();   
-            this.container.insertBefore(anotherCard.card, container.firstChild);                               
+            this.container.insertBefore(container.firstChild, anotherCard.card);                               
         }.bind(this)))
         .catch( (err) => console.log('Failed to render cards. Reason: ' + err) );
     }
